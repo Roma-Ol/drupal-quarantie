@@ -1,0 +1,23 @@
+@import "mixins";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+//SLIDER
+.block-views-blockfrontpage-slider-block-1{
+  font-family: $font-sans-serif;
+  padding: 0 0 180px;
+  .block-title{
+    text-transform: uppercase;
+    @include txt-center;
+    font-weight: 700;
+    margin: 35px 0 80px;
+  }
+  .view-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    .slick-track{
+      display: flex;
+      align-items: center;
+    }
+  }
+}

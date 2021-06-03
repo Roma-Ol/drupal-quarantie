@@ -1,0 +1,116 @@
+@import "mixins";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+//TEASERS
+.block-views-blockour-team-view-block-block-1{
+  font-family: $font-sans-serif;
+  .block-title {
+    text-transform: uppercase;
+    @include txt-center;
+    font-weight: 700;
+    margin: 105px 0 40px 0;
+  }
+  .view-content{
+    max-width: 1250px;
+    margin: 0 auto;
+    @include d-f_j-sb;
+    gap: 33px;
+    a{
+      img{
+        filter: grayscale(100%);
+        transition: 0.5s;
+        &:hover{
+          filter: grayscale(0);
+        }
+      }
+    }
+    .node--type-our-team{
+      @include txt-center;
+      h2{
+        @include clear-margin;
+        @include clear-padding;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 30px 0 5px;
+      }
+      .field--name-field-team-member-pos{
+        a{
+          text-transform: uppercase;
+          font-size: 12px;
+          color: $clr-gray;
+        }
+      }
+      .field--name-node-link{
+        text-transform: uppercase;
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        background: $clr-black;
+        margin: 10px auto 20px;
+        transition: 0.5s;
+        @include centralize;
+        &:hover{
+          background: $clr-black-hvr;
+        }
+        a{
+          color: $clr-white;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+      .social_like_div{
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        height: 25px;
+        align-items: center;max-width: 180px;
+        .social-sharing-buttons{
+          @include btn-social-links;
+        }
+      }
+      .flag-like-button{
+        a{
+          color: red;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+        .js-flag-message{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//PAGE
+.view-our-team-view-block{
+  h2{
+    text-align: center;
+    a{
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+  .layout--twocol-section{
+    border-bottom: 5px solid $clr-blue;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    .layout__region--first{
+    }
+    .layout__region--second{
+      flex: 0 1 50%;
+    }
+  }
+  .block-field-blocknodeour-teamfield-team-member-pos{
+    font-size: 25px;
+    border-bottom: 1px solid $clr-blue;
+    color: $clr-gray;
+    margin: 0 0 20px;
+  }
+}
+

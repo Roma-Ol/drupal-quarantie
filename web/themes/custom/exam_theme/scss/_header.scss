@@ -1,0 +1,103 @@
+@import "mixins";
+@import "variables";
+
+//GLOBAL STYLES AT ALL PAGES (excluding home page)
+.navbar{
+  height: auto;
+  padding: 40px 0 40px;
+  background: $clr-white;
+  .navbar-header{
+    float: none;
+  }
+  .region-navigation{
+    background: $clr-white;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    .website_logo{
+      background: $clr-darkblue-footer;
+      @include logo-styling;
+      padding: 33px;
+    }
+    nav{
+      ul{
+        .active{
+          a{
+            background: $clr-white;
+          }
+        }
+        li{
+          a{
+            padding-bottom: 0;
+          }
+        }
+        li:first-child{
+          background: center no-repeat url("/themes/custom/exam_theme/images/Homepage-menu.png");
+          a{
+            color: rgba(255, 0, 0, 0);
+          }
+        }
+        a{
+          transition: 0.5s;
+          font-size: 17px;
+          text-transform: uppercase;
+          font-weight: 200;
+          line-height: 100px;
+          color: $clr-black;
+          &:hover{
+            color: $clr-black-hvr;
+          }
+        }
+        .is-active{
+          border-bottom: 5px solid $clr-blue;
+        }
+      }
+    }
+    section:last-child{
+      padding: 0 15px 0 0;
+      .social-sharing-buttons{
+        @include btn-social-links;
+      }
+    }
+  }
+}
+.region-header{
+  position: absolute;
+  margin: 0 auto;
+  top: -350px;
+  left: 20%;
+  text-align: center;
+  p:first-child, p:nth-child(2), p:nth-child(3) {
+    font-family: Arial;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: justify;
+    @include clear-margin;
+    line-height: 1em;
+  }
+  p:nth-child(1){
+    color: $clr-white;
+    font-size: 60px;
+    line-height: 0.8em;
+  }
+  p:nth-child(2){
+    color: $clr-black;
+    font-size: 37px;
+  }
+  p:nth-child(3){
+    color: $clr-blue;
+    font-size: 12px;
+    width: 345px;
+  }
+}
+
+//STYLES 4 HOME PAGE
+.path-frontpage {
+  .navbar{
+    height: 630px;
+    background: url("/themes/custom/exam_theme/images/header.png");
+    padding: 40px 0 0 0;
+  }
+}

@@ -1,0 +1,91 @@
+@import "mixins";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+//PROJECTS
+.block-views-blockprojects-view-block-block-1{
+  font-family: $font-sans-serif;
+  background-image: linear-gradient(135deg, #cacaca 8.33%, #fefefe 8.33%, #fefefe 50%, #cacaca 50%, #cacaca 58.33%, #fefefe 58.33%, #fefefe 100%);
+  background-size: 8.49px 8.49px;
+  padding: 0 0 140px;
+  .block-title{
+    text-transform: uppercase;
+    background: $clr-white;
+    @include txt-center;
+    padding: 115px 0 25px 0;
+    font-weight: 700;
+    margin: 0px 0 70px 0;
+  }
+  .view-content{
+    @include d-f_j-sb;
+    max-width: 1250px;
+    margin: 0 auto;
+    .node--type-pro {
+      @include txt-center;
+      background: $clr-white;
+      border-bottom: 1px solid black;
+      padding: 0 0 10px 0;
+      h2{
+        @include clear-margin;
+        @include clear-padding;
+        text-transform: uppercase;
+        font-size: 21px;
+        margin: 30px 0 20px;
+      }
+      .field--name-field-project-tag {
+        a{
+          font-size: 16px;
+          font-weight: 400;
+          text-transform: uppercase;
+          transition: 0.5s;
+          &:hover{
+            text-decoration: none;
+            color: $clr-blue-hvr;
+          }
+        }
+        a[href="/taxonomy/term/1"]{
+          color: #1bbc9b;
+        }
+        a[href="/taxonomy/term/2"]{
+          color: #9b58b5;
+        }
+        a[href="/taxonomy/term/3"]{
+          color: #e84c3d;
+        }
+        a[href="/taxonomy/term/4"]{
+          color: #28a9e0;
+        }
+      }
+      .field--name-node-link{
+        @include btn;
+        background: $clr-black;
+        &:hover{
+          background: $clr-black-hvr;
+        }
+      }
+    }
+  }
+  .pager-nav{
+    ul{
+      a{
+        border: none;
+        background: none;
+        color: $clr-black;
+        transition: 0.4s;
+        &:hover{
+          background: $clr-gray;
+          border-radius: 50%;
+        }
+      }
+      .active{
+        a{
+          background: $clr-gray;
+          border-radius: 50%;
+          &:hover{
+            border-radius: 5%;
+          }
+        }
+      }
+    }
+  }
+}

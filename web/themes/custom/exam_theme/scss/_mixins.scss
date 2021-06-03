@@ -1,0 +1,67 @@
+//display:flex + justify:space-between
+@mixin d-f_j-sb {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin txt-center{
+  text-align: center;
+}
+@mixin clear-margin{
+  margin: 0;
+}
+@mixin clear-padding{
+  padding: 0;
+}
+@mixin centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin btn{
+    width: 100px;
+    height: 30px;
+    background: $clr-blue;
+    text-transform: uppercase;
+    margin: 20px auto 0;
+    transition: 0.5s;
+    @include centralize;
+    &:hover{
+      background: $clr-blue-hvr;
+    }
+    a{
+      color: $clr-white;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+}
+@mixin btn-social-links{
+  a{
+    svg{
+      transition: 0.3s;
+      background: $clr-blue;
+      fill: $clr-white;
+      &:hover{
+        background: $clr-blue-hvr;
+      }
+    }
+  }
+}
+@mixin logo-styling{
+  text-align: center;
+  h2{
+    color: $clr-blue;
+    font-family: Nexa_bold;
+    @include clear-margin;
+  }
+  p{
+    font-size: 14px;
+    color: $clr-white;
+    font-family: Nexa_regular;
+  }
+}
+
+@mixin grid-2-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

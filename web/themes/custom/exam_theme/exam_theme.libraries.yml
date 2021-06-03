@@ -1,0 +1,7 @@
+framework:
+  css:
+    theme:
+      css/elements.css: {}
+    component:
+      css/header.css: {}
+      css/main.css: {}

@@ -1,0 +1,18 @@
+@import "mixins";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+.col-sm-12{
+  padding: 0;
+}
+
+@import "global.scss";
+@import "header";
+@import "about.scss";
+@import "services.scss";
+@import "projects.scss";
+@import 'our_team.scss';
+@import "news.scss";
+@import "slider.scss";
+@import "contact_us.scss";
+@import "footer.scss";
+@import "adaptivity.scss";

@@ -1,0 +1,99 @@
+@import "mixins";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+//NEWS
+.block-views-blocknews-view-block-block-1{
+  font-family: $font-sans-serif;
+  background-image: linear-gradient(135deg, #cacaca 8.33%, #fefefe 8.33%, #fefefe 50%, #cacaca 50%, #cacaca 58.33%, #fefefe 58.33%, #fefefe 100%);
+  background-size: 8.49px 8.49px;
+  .block-title{
+    text-transform: uppercase;
+    background: $clr-white;
+    @include txt-center;
+    padding: 115px 0 25px 0;
+    font-weight: 700;
+    margin: 0px 0 70px 0;
+  }
+  .view-content{
+    @include d-f_j-sb;
+    max-width: 1250px;
+    margin: 0 auto 100px;
+    gap: 50px;
+    .views-row{
+      background: $clr-white;
+      padding: 15px;
+      h2{
+        display: none;
+      }
+      .layout--threecol-section{
+        div:first-child{
+          section:nth-child(1){
+            text-transform: uppercase;
+            font-size: 40px;
+            text-align: center;
+            font-weight: 200;
+            height: 25px;
+          }
+          section:nth-child(2){
+            color: $clr-blue;
+            text-align: center;
+            font-size: 70px;
+            font-weight: 600;
+            height: 80px;
+          }
+          section:nth-child(3){
+            color: black;
+            text-align: center;
+          }
+        }
+        div:nth-child(2){
+          border-left: 1px solid black;
+          padding: 0 0 0 15px;
+          a{
+            color: $clr-black;
+          }
+          section:before{
+            content: "Writter ";
+            display: inline-block;
+            text-transform: uppercase;
+            color: $clr-gray;
+          }
+          section:after{
+            content: " / ";
+            color: $clr-gray;
+            display: inline-block;
+          }
+        }
+        div:nth-child(3){
+          display: flex;
+          justify-content: flex-end;
+          color: $clr-gray;
+        }
+      }
+      .layout--twocol-section{
+        .layout__region--first{
+          visibility: hidden;
+        }
+        .layout__region--second{
+          padding: 0 0 0 15px;
+          border-left: 1px solid $clr-black;
+          margin: 10px 0 0;
+          section:first-child{
+            text-transform: uppercase;
+            font-size: 24px;
+            span:after{
+              content: "...";
+              display: inline-block;
+            }
+          }
+          section:last-child{
+            text-transform: uppercase;
+            text-align: justify;
+            letter-spacing: -1px;
+          }
+        }
+      }
+    }
+  }
+}

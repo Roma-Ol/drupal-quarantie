@@ -1,0 +1,193 @@
+@import "mixins";
+@import "variables";
+
+@media (max-width:1150px ) {
+  //HEADER ADAPTIVITY
+  //AT ALL THE PAGES (excl front)
+  .navbar {
+    .navbar-header{
+      @include clear-margin;
+    }
+    .region-navigation {
+      background: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      nav{
+        ul{
+          display: flex;
+          a{
+            font-size: 12px;
+            line-height: 1;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  //AT FRONTPAGE
+  .path-frontpage {
+    .navbar {
+      height: auto;
+      background: url("/themes/custom/exam_theme/images/header.png");
+      padding: 40px 0 0 0;
+    }
+  }
+  //REMOVING THE DUMMY TEXT
+  .region-header {
+    display: none;
+  }
+
+  //ABOUT ADAPTIVITY
+  #block-aboutblock{
+    .field--name-body{
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  //SERVICES ADAPTIVITY
+  .block-views-blockservices-view-block-block-1{
+    .view-content{
+      @include grid-2-col;
+      .node--type-services{
+        margin-bottom: 15px;
+        .field--type-text-with-summary{
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  //PROJECTS ADAPTIVITY
+  .block-views-blockprojects-view-block-block-1 {
+    @include clear-padding;
+    .view-content{
+      @include grid-2-col;
+      .node--type-pro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+      }
+    }
+  }
+
+  //OUR TEAM ADAPTIVITY
+  .block-views-blockour-team-view-block-block-1{
+    .view-content{
+      .node--type-our-team{
+        h2{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:750px ) {
+  .block-views-blockour-team-view-block-block-1{
+    .view-content{
+      @include grid-2-col;
+      .node--type-our-team{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+@media (max-width:640px ) {
+  //HEADER ADAPTIVITY
+  //AT ALL THE PAGES (excl front)
+  .navbar {
+    .region-navigation {
+      .website_logo{
+        display: none;
+      }
+      .social-sharing-buttons{
+        display: none;
+      }
+      nav{
+        ul{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  //4 FRONTPAGE
+  .path-frontpage {
+    .navbar{
+      .region-navigation {
+        .website_logo{
+          display: block;
+        }
+        .social-sharing-buttons{
+          display: flex;
+        }
+      }
+    }
+  }
+
+  //SERVICES
+  .block-views-blockservices-view-block-block-1{
+    .view-content{
+      .node--type-services{
+        h2{
+          font-size: 15px;
+        }
+        .field--type-text-with-summary{
+          width: 90%;
+        }
+      }
+    }
+  }
+
+    //PROJECTS
+  .block-views-blockprojects-view-block-block-1{
+    .view-content{
+      .node--type-pro {
+        h2{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+    //NEWS
+  .block-views-blocknews-view-block-block-1{
+    .view-content{
+      display: block;
+      .views-row{
+        .layout--threecol-section{
+          div:nth-child(3){
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  //FORM
+  .contact-us-page{
+    .region-content{
+      padding: 20px;
+      display: flex;
+      flex-direction: column-reverse;
+      section:nth-child(2){
+
+      }
+      section:nth-child(3){
+        margin: 0 auto;
+        text-align: center;
+        img{
+          display: none;
+        }
+      }
+    }
+  }
+}

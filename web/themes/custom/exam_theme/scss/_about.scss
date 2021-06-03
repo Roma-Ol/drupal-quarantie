@@ -1,0 +1,36 @@
+@import "mixins";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+//ABOUT BLOCK
+#block-aboutblock{
+  max-width: 1250px;
+  margin: 0 auto 100px;
+  border-top: 5px solid $clr-black;
+  border-bottom: 5px solid $clr-blue;
+  padding: 10px 0;
+  .field--name-body{
+    @include d-f_j-sb;
+    align-items: center;
+    .about_block_header{
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include clear-margin;
+    }
+    .about_block_text{
+      color: $clr-gray;
+      text-transform: uppercase;
+      @include clear-margin;
+      font-size: 19px;
+      font-weight: 100;
+    }
+    .about_block_link{
+      @include btn;
+      width: 115px;
+      margin: 0;
+      a{
+        text-transform: uppercase;
+      }
+    }
+  }
+}
